@@ -1,0 +1,34 @@
+.menu{
+    width: 300px;
+    height: 100vh;
+    z-index: 3;
+    background-color: #15023a;
+    top: 0;
+    right: -300px;
+    display: flex;
+    position: fixed;
+    align-items: center;
+    justify-content: center;
+    transition: all 1s ease-in;
+    &.active{
+        right:0;
+    }
+    ul{
+        font-size:30px;
+        margin: 0;
+        padding:0;
+        font-weight: 300;
+        width: 60%;
+        li{
+            cursor: pointer;
+            margin-bottom: 20px;
+            a{
+                font-size: inherit;
+                color: white;
+            }
+            &:hover{
+                font-weight: 500;
+            }
+        }
+    }
+}
