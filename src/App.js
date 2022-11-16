@@ -1,6 +1,5 @@
 import './App.scss';
 import Topbar from "./components/Topbar/topbar"
-import Contact from "./components/Contact/contact"
 import Works from "./components/Works/works"
 import Skills from "./components/Skills/skills"
 import Intro from "./components/Intro/intro"
@@ -14,10 +13,9 @@ function App() {
         <Topbar menuOpen={menuOpen} SetmenuOpen={SetmenuOpen}/>
         <Menu menuOpen={menuOpen} SetmenuOpen={SetmenuOpen}/>
         <div className="sections">
-          <Intro />
+          <Intro/>
           <Skills/>
           <Works/>
-          <Contact/>
         </div>
     </div>
   );
