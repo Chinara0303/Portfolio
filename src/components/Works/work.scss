@@ -75,6 +75,7 @@
                     display: flex;
                     align-items: center;
                     overflow: hidden;
+                    user-select: none;
                     img{
                         width: 100%;
                     }
@@ -88,6 +89,7 @@
     .arrow{
         position: absolute;
         height: 50px;
+        cursor: pointer;
         &.left{
             transform: rotate(180deg);
             left: 100px;

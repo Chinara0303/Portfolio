@@ -1,22 +1,46 @@
 import "./work.scss"
+import React, { useState } from 'react'
 
-export default function work() {
-  const data =[
+export default function Works() {
+ const [currentSlide, setCurrentslide] = useState(0);
+ const data =[
     {
       id:1,
       title: "Ecoshop",
       src:"../assets/ECOSHOPimg.png",
       desc:"E-commerce website",
       weblink:"https://echoshopp.netlify.app/index.html"
-    }
-  ]
+    },
+    {
+      id:2,
+      title: "iii",
+      src:"../assets/ECOSHOPimg.png",
+      desc:"E-commerce website",
+      weblink:"https://echoshopp.netlify.app/index.html"
+    },
+    {
+      id:3,
+      title: "dhh",
+      src:"../assets/ECOSHOPimg.png",
+      desc:"E-commerce website",
+      weblink:"https://echoshopp.netlify.app/index.html"
+    },
+
+ ];
+
+ const handleClick = (way) => {
+  way === "left"
+    ? setCurrentslide(currentSlide > 0 ? currentSlide - 1 : 2)
+    : setCurrentslide(currentSlide < data.length - 1 ? currentSlide + 1: 0);
+};
   return (
     <div className='works' id='works'>
      <div className='headerTitle'>
         <h2>Works</h2>
       </div>
-       <div className='slider'>
-      {data.map((d)=> <div className='container'>
+       <div className='slider' style={{transform:`translateX(-${currentSlide * 100}vw)`}}>
+      {data.map((d)=>
+      <div className='container'>
           <div className='item'>
              <div className='left'>
               <div className='leftContainer'>
@@ -38,8 +62,8 @@ export default function work() {
         </div>)}
        
        </div>
-       <img src='../assets/arrow.png' alt='' className="arrow left"/>
-       <img src='../assets/arrow.png' alt='' className="arrow right"/>
+       <img src='../assets/arrow.png' alt='' className="arrow left"   onClick={()=>handleClick("left")}/>
+       <img src='../assets/arrow.png' alt='' className="arrow right"  onClick={()=>handleClick()}/>
     </div>
   )
 }

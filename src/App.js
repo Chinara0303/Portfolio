@@ -1,8 +1,8 @@
 import './App.scss';
-import Topbar from "./components/Topbar/topbar"
-import Works from "./components/Works/works"
-import Skills from "./components/Skills/skills"
-import Intro from "./components/Intro/intro"
+import Topbar from "./components/Topbar/Topbar"
+import Works from "./components/Works/Works"
+import Skills from "./components/Skills/Skills"
+import Intro from "./components/Intro/Intro"
 import { useState } from 'react';
 import Menu from './components/Menu/Menu';
 
