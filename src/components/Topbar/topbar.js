@@ -2,18 +2,19 @@ import "./topbar.scss";
 
 export default function topbar({menuOpen,SetmenuOpen}) {
   return (
-    <div className={"topbar" + " " +(menuOpen && "active")}>
+    <div className = {"topbar" + " " +(menuOpen && "active")}>
       <div className="wrapper">
         <div className="left">
-           <a href=""> Chinara.</a>
-           <div className="itemContainer">
-           <i className="fa-solid fa-mobile"></i>
+           <a href="">chinara</a>
+          <div className="itemContainer">
+           <i className="fa-solid fa-mobile-screen-button"></i>
              <span>+994 50 482 21 64</span> 
           </div>
           <div className="itemContainer">
-          <i className="fa-solid fa-envelope"></i>
-          <span>cinareibadova1202@gmail.com</span> 
+           <i className="fa-solid fa-envelope"></i>
+           <span>cinareibadova1202@gmail.com</span> 
           </div>
+          
         </div>
         <div className="rigth">
           <div className="hamburger" onClick={()=>SetmenuOpen(!menuOpen)}>

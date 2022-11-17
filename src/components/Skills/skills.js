@@ -10,44 +10,44 @@ export default function skills() {
         <div className='skillcard'>
         <ul className='firstcolumn'>
           <li>
-            <a href='#'><i className="fa-brands fa-html5"></i>HTML</a>
+            <i className="fa-brands fa-html5"></i>HTML
           </li>
           <li>
-            <a href='#'><i className="fa-brands fa-css3"></i>CSS</a>
+            <i className="fa-brands fa-css3"></i>CSS
           </li>
           <li>
-            <a href='#'><i className="fa-brands fa-sass"></i>SASS</a>
+            <i className="fa-brands fa-sass"></i>SASS
           </li>
           <li>
-            <a href='#'><i className="fa-brands fa-js"></i>Javascript</a>
+            <i className="fa-brands fa-js"></i>Javascript
           </li>
           <li>
-            <a href='#'><i className="fa-brands fa-bootstrap"></i>Bootstrap</a>
+            <i className="fa-brands fa-bootstrap"></i>Bootstrap
           </li>
           <li>
-            <a href='#'>Typescript</a>
+           Typescript
           </li>
 
           
         </ul>
         <ul className='secondcolumn'>
         <li>
-            <a href='#'>Jquery</a>
+            Jquery
           </li>
           <li>
-            <a href='#'><i className="fa-brands fa-react"></i>React</a>
+            <i className="fa-brands fa-react"></i>React
           </li>
           <li>
-            <a href='#'>C#</a>
+            C#
           </li>
           <li>
-            <a href='#'>ASP.NET</a>
+            ASP.NET
           </li>
           <li>
-            <a href='#'><i className="fa-solid fa-database"></i>MSSQL</a>
+            <i className="fa-solid fa-database"></i>MSSQL
           </li>
           <li>
-            <a href='#'><i className="fa-solid fa-code-branch"></i>GIT</a>
+            <i className="fa-solid fa-code-branch"></i>GIT
           </li>
         </ul>
         </div>

@@ -1,3 +1,4 @@
+@import "../../global.scss";
 .menu{
     width: 300px;
     height: 100vh;
@@ -10,24 +11,44 @@
     align-items: center;
     justify-content: center;
     transition: all 1s ease-in;
+    @include mobile{
+        user-select: none !important;
+    }
     &.active{
         right:0;
     }
     ul{
         font-size:30px;
-        margin: 0;
+        margin-left: 30px;
         padding:0;
         font-weight: 300;
-        width: 60%;
+        width: 100%;
         li{
             cursor: pointer;
             margin-bottom: 20px;
             a{
-                font-size: inherit;
                 color: white;
             }
             &:hover{
                 font-weight: 500;
+            }
+            .gitlink{
+                margin-right: 10px;
+            }
+           
+           
+        }
+        .contact{
+            display: none;
+            @include mobile{
+                display: block;
+                font-size:14px;
+                color:white;
+                margin-top: 20px;
+                i{
+                    margin-right: 4px;
+                }
+
             }
         }
     }

@@ -1,3 +1,4 @@
+@import "../../global.scss";
 .works{
     position: relative;
     background-color: crimson;
@@ -5,8 +6,22 @@
     display: flex;
     justify-content: center;
     align-items: center;
+   
+    .slick-slide > div {
+    margin: 0 10px;
+    }
+    .slick-list {
+    margin: 0 -10px;
+    }
+
+    .slick-slide > div {
+    margin: 0 10px;
+    }
+    .slick-list {
+    margin: 0 -10px;
+    }
     .headerTitle{
-         position: absolute;
+        position: absolute;
         top: 0;
         h2{
             font-size: 40px;
@@ -19,83 +34,88 @@
     }
     
     .slider{
-       height: 350px;
+       height: 400px;
        display: flex;
        position: absolute;
         .container{
-            width: 100vw;
+            width: 100vh;
             display: flex;
             align-items: center;
             justify-content: center;
-            .item{ 
+            @include mobile {
+                width: 450px;
+            }
+            .card{ 
                 width: 700px;
                 height: 100%;
+                display: flex !important;
+                align-items: center !important;
+                justify-content: center !important;
                 background-color: white;
-                border-radius: 20px;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                .left{
-                    flex: 4;
+               border-radius: 20px;
+                .top{
                     display: flex;
                     justify-content: center;
                     align-items: center;
-                    height: 80%;
-                    .leftContainer{
-                        width: 90%;
-                        height: 70%;
+                    .topContainer{
                         display: flex;
-                        flex-direction: column;
                         justify-content: space-between;
-                        .imgContainer{
-                            border-radius: 50%;
-                            width: 40px;
-                            height: 40px;
-                            background-color: rgb(238, 167, 181);
+                        flex-direction: column;
+                        img{
+                            width: 550px;
+                            overflow: hidden;
+                            @include mobile{
+                                width: 400px;
+                            }
+                        }
+                        .desc{
                             display: flex;
                             justify-content: center;
                             align-items: center;
-                            img{
-                                width: 25px;
-                                color: white;
+                            gap: 10px;
+                            .title{
+                                font-size: 14px;
+                                font-weight: 500;
+                                color: #15023a;
+                            }
+                            a{
+                                color: #15023a;
+                                i{
+                                    font-size: 20px;
+                                }
                             }
                         }
-                        h3{
-                            font-size: 20px;
-                        }
-                        p{
-                            font-size: 14px;
-                        }
+                       
                     }
 
                 }
-                .rigth{
-                    flex: 10;
-                    height: 100%;
-                    display: flex;
-                    align-items: center;
-                    overflow: hidden;
-                    user-select: none;
-                    img{
-                        width: 100%;
-                    }
+                // .rigth{
+                //     flex: 10;
+                //     height: 100%;
+                //     display: flex;
+                //     align-items: center;
+                //     overflow: hidden;
+                //     user-select: none;
+                //     img{
+                //         width: 100%;
+                //     }
 
-                }
+                // }
 
             }
         }
     }
 
-    .arrow{
-        position: absolute;
-        height: 50px;
-        cursor: pointer;
-        &.left{
-            transform: rotate(180deg);
-            left: 100px;
-        }
-        &.right{
-            right: 100px !important;
-        }
-    }
+    // .slick-next .slick-prev{
+    //     position: absolute;
+    //     height: 50px;
+    //     cursor: pointer;
+    //     &.slick-prev-arrow{
+    //         transform: rotate(180deg);
+    //         left: 100px;
+    //     }
+    //     &.slick-next-arrow{
+    //         right: 100px !important;
+    //     }
+    // }
 }
