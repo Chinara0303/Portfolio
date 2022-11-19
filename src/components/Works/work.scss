@@ -1,121 +1,290 @@
 @import "../../global.scss";
-.works{
-    position: relative;
+
+.works {
     background-color: crimson;
-    margin: 40px 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-   
-    .slick-slide > div {
-    margin: 0 10px;
-    }
-    .slick-list {
-    margin: 0 -10px;
+    position: relative;
+
+    .slick-slide>div {
+        margin: 0 10px;
     }
 
-    .slick-slide > div {
-    margin: 0 10px;
-    }
     .slick-list {
-    margin: 0 -10px;
+        margin: 0 -10px;
     }
-    .headerTitle{
-        position: absolute;
-        top: 0;
-        h2{
+
+    .slick-slide>div {
+        margin: 0 10px;
+    }
+
+    .slick-list {
+        margin: 0 -10px;
+    }
+
+    .headerTitle {
+        h2 {
+            text-align: center;
             font-size: 40px;
             color: white;
-            text-align: center;
             font-weight: 500;
-            font-style:inherit;
+            font-style: inherit;
             letter-spacing: 2px;
         }
     }
-    
-    .slider{
-       height: 400px;
-       display: flex;
-       position: absolute;
-        .container{
-            width: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
+
+    .slider {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        .container {
+            max-width: 900px;
+            padding: 0 20px;
+
             @include mobile {
-                width: 450px;
+                width: 500px;
             }
-            .card{ 
-                width: 700px;
-                height: 100%;
-                display: flex !important;
-                align-items: center !important;
-                justify-content: center !important;
-                background-color: white;
-               border-radius: 20px;
-                .top{
+
+            .card {
+                background-color: #FFEFBA;
+                border-radius: 20px;
+
+                .top {
                     display: flex;
-                    justify-content: center;
                     align-items: center;
-                    .topContainer{
-                        display: flex;
-                        justify-content: space-between;
-                        flex-direction: column;
-                        img{
-                            width: 550px;
-                            overflow: hidden;
-                            @include mobile{
-                                width: 400px;
-                            }
-                        }
-                        .desc{
-                            display: flex;
-                            justify-content: center;
-                            align-items: center;
-                            gap: 10px;
-                            .title{
-                                font-size: 14px;
-                                font-weight: 500;
-                                color: #15023a;
-                            }
-                            a{
-                                color: #15023a;
-                                i{
-                                    font-size: 20px;
+                    justify-content: center;
+
+                    .topContainer {
+                        a{
+                            img {
+                                width: 75%;
+                                margin: 10px auto;
+                                border-radius:10px ;
+                                @include mobile{
+                                    width: 100%;
                                 }
                             }
                         }
                        
+
+                        .desc {
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            gap: 10px;
+                            .title {
+                                color: #15023a;
+                                font-size: 25px;
+                                font-weight: 500;
+                                @include mobile{
+                                    font-size: 18px;
+                                }
+
+                            }
+                            a {
+                                i {
+                                    color: #15023a;
+                                    font-size: 25px;
+                                }
+                            }
+
+                        }
                     }
-
                 }
-                // .rigth{
-                //     flex: 10;
-                //     height: 100%;
-                //     display: flex;
-                //     align-items: center;
-                //     overflow: hidden;
-                //     user-select: none;
-                //     img{
-                //         width: 100%;
-                //     }
 
-                // }
 
             }
         }
     }
 
-    // .slick-next .slick-prev{
-    //     position: absolute;
-    //     height: 50px;
-    //     cursor: pointer;
-    //     &.slick-prev-arrow{
-    //         transform: rotate(180deg);
-    //         left: 100px;
-    //     }
-    //     &.slick-next-arrow{
-    //         right: 100px !important;
-    //     }
-    // }
+    .toTop {
+        z-index: 999;
+        position: absolute;
+        bottom: 0;
+        right: 50px;
+        button {
+            padding: 10px ;
+            color: white;
+            border-radius: 50%;
+            cursor: pointer;
+            animation: topbtn 2s infinite;
+            border: none;
+            margin-bottom: 10px;
+            @keyframes topbtn {
+                100% {
+                    margin-bottom: 20px;
+                }
+
+            }
+            
+
+            i {
+                font-size: 15px;
+                color: #15023a;
+
+            }
+        }
+
+    }
+
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// .works {
+//     position: relative;
+//     background-color: crimson;
+//     margin-top: 40px;
+//     display: flex;
+//     justify-content: center;
+//     align-items: center;
+
+//   
+
+//     .headerTitle {
+//         position: absolute;
+//         top: 0;
+
+//         h2 {
+//             font-size: 40px;
+//             color: white;
+//             text-align: center;
+//             font-weight: 500;
+//             font-style: inherit;
+//             letter-spacing: 2px;
+//         }
+//     }
+
+//     .slider {
+//         height: 400px;
+//         display: flex;
+//         position: absolute;
+
+//         .container {
+//             width: 100vh;
+//             display: flex;
+//             align-items: center;
+//             justify-content: center;
+
+//             @include mobile {
+//                 width: 450px;
+//             }
+//             .card {
+//                 .top {
+//                     display: flex;
+//                     justify-content: center;
+//                     align-items: center;
+//                     .topContainer {
+//                         display: flex;
+//                         justify-content: space-between;
+//                         flex-direction: column;
+//                         img {
+//                             width: 550px;
+//                             overflow: hidden;
+
+//                             @include mobile {
+//                                 width: 400px;
+//                             }
+//                         }
+
+//                         .desc {
+//                             display: flex;
+//                             justify-content: center;
+//                             align-items: center;
+//                             
+
+//                             .title {
+//                                 font-size: 14px;
+//                                 font-weight: 500;
+//                                 color: #15023a;
+//                             }
+
+//                             a {
+//                                 color: #15023a;
+
+//                                 i {
+//                                     font-size: 20px;
+//                                 }
+//                             }
+//                         }
+
+//                     }
+
+//                 }
+
+//                 // .rigth{
+//                 //     flex: 10;
+//                 //     height: 100%;
+//                 //     display: flex;
+//                 //     align-items: center;
+//                 //     overflow: hidden;
+//                 //     user-select: none;
+//                 //     img{
+//                 //         width: 100%;
+//                 //     }
+
+//                 // }
+
+//             }
+//         }
+//     }
+
+//     // .slick-next .slick-prev{
+//     //     position: absolute;
+//     //     height: 50px;
+//     //     cursor: pointer;
+//     //     &.slick-prev-arrow{
+//     //         transform: rotate(180deg);
+//     //         left: 100px;
+//     //     }
+//     //     &.slick-next-arrow{
+//     //         right: 100px !important;
+//     //     }
+//     // }
+
+//     .toTop {
+//         z-index: 999;
+//         position: absolute;
+//         bottom: 0;
+//         right: 50px;
+//         margin-bottom: 50px;
+
+//         button {
+//             padding: 10px 30px;
+//             background-color: #15023a;
+//             color: white;
+//             border-radius: 30px;
+//             cursor: pointer;
+//             animation: topbtn 2s infinite;
+
+//             @keyframes topbtn {
+//                 100% {
+//                     margin-bottom: 20px;
+//                 }
+
+//             }
+
+//             span {
+//                 font-size: 15px;
+//             }
+
+//             i {
+//                 margin-left: 10px;
+//                 font-size: 15px;
+
+//             }
+//         }
+
+//     }
+// }

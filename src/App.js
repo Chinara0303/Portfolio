@@ -8,12 +8,13 @@ import Menu from './components/Menu/Menu';
 
 function App() {
  const [menuOpen,SetmenuOpen] = useState(false)
+
   return (
     <div className='App'>
         <Topbar menuOpen={menuOpen} SetmenuOpen={SetmenuOpen}/>
         <Menu menuOpen={menuOpen} SetmenuOpen={SetmenuOpen}/>
         <div className="sections">
-          <Intro/>
+          <Intro />
           <Skills/>
           <Works/>
         </div>

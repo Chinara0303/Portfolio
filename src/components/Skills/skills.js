@@ -1,56 +1,32 @@
 import "./skill.scss"
+import { dataSkills } from "../../data.js";
 
-export default function skills() {
+export default function Skills() {
   return (
     <div className='skills' id='skill'>
-      <div className ='title'>
-          <h2>Skills</h2>
-        </div>
+      <div className='title'>
+        <h2>Skills</h2>
+      </div>
       <div className='skillWrapper'>
         <div className='skillcard'>
-        <ul className='firstcolumn'>
-          <li>
-            <i className="fa-brands fa-html5"></i>HTML
-          </li>
-          <li>
-            <i className="fa-brands fa-css3"></i>CSS
-          </li>
-          <li>
-            <i className="fa-brands fa-sass"></i>SASS
-          </li>
-          <li>
-            <i className="fa-brands fa-js"></i>Javascript
-          </li>
-          <li>
-            <i className="fa-brands fa-bootstrap"></i>Bootstrap
-          </li>
-          <li>
-           Typescript
-          </li>
-
-          
-        </ul>
-        <ul className='secondcolumn'>
-        <li>
-            Jquery
-          </li>
-          <li>
-            <i className="fa-brands fa-react"></i>React
-          </li>
-          <li>
-            C#
-          </li>
-          <li>
-            ASP.NET
-          </li>
-          <li>
-            <i className="fa-solid fa-database"></i>MSSQL
-          </li>
-          <li>
-            <i className="fa-solid fa-code-branch"></i>GIT
-          </li>
-        </ul>
+          <ul className="leftside">
+            {dataSkills.map((s, index) => {
+              if (index % 2 === 0) {
+                return <li key={index}>{s.icon} {s.name}</li>
+              }
+              return null;
+            })}
+          </ul>
+          <ul className="rigthside">
+            {dataSkills.map((s, index) => {
+              if (index % 2 === 1) {
+                return <li key={index}>{s.icon} {s.name}</li>
+              }
+              return null;
+            })}
+          </ul>
         </div>
+
       </div>
     </div>
   )

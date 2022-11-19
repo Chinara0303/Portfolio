@@ -1,13 +1,13 @@
 import "./work.scss"
-// import React, { useState } from 'react'
- import Slider from "react-slick";
-import { DataWebSites } from "../../data";
-import "../Slickslider/slick.scss"; 
+import Slider from "react-slick";
+import { dataWebSites } from "../../data";
+import "../Slickslider/slick.scss";
 import "../Slickslider/slick-theme.scss";
 
 
-export default function Works() {
-  const settings = {
+export default function Works(showTopButton,setShowTopButton) {
+
+  const Settings = {
     dots: true,
     infinite: false,
     speed: 500,
@@ -28,42 +28,56 @@ export default function Works() {
         breakpoint: 576,
         settings: {
           slidesToShow: 1,
-          slidesToScroll:1,
+          slidesToScroll: 1,
           initialSlide: 1
         }
       },
-      
+
     ]
   };
-  
+
+  const goToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    })
+  }
+
   return (
     <div className='works' id='works'>
-     <div className='headerTitle'>
+      <div className='headerTitle'>
         <h2>Works</h2>
       </div>
-       <div className='slider'>
-      <div className='container'>
-        <Slider  {...settings}>
-        {DataWebSites.map((d)=>(
-        <div className='card'>
-             <div className='top'>
-                <div className='topContainer'>
+      <div className='slider'>
+        <div className='container'>
+          <Slider {...Settings}>
+            {dataWebSites.map((d) => (
+              <div className='card' key={d.id}>
+                <div className='top'>
+                  <div className='topContainer'>
                     <a href={d.weblink}>
-                      <img src={d.src} alt='website img'/>
-                    </a> 
-                  <div className='desc'>
-                    <p className="title">{d.title}</p>
-                    <a href={d.github}><i class="fa-brands fa-github"></i></a>
+                      <img src={d.src} alt='website img' />
+                    </a>
+                    <div className='desc'>
+                      <p className="title">{d.title}</p>
+                      <a href={d.github}><i className="fa-brands fa-github"></i></a>
+                    </div>
                   </div>
                 </div>
-             </div>
-          </div>
-           ))}
-        </Slider>
+              </div>
+            ))}
+          </Slider>
         </div>
-       
-       </div>
-      
+      </div>
+
+      <div className='toTop'>
+        <div className="btnContainer">
+            <button type="button" onClick={goToTop} >
+              <i className="fa-solid fa-angles-up"></i>
+            </button>
+        </div>
+      </div>
+
     </div>
   )
 }

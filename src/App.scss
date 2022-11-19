@@ -1,23 +1,30 @@
- *{
+ * {
     box-sizing: border-box;
-    overflow-x: hidden;
  }
- a{
+ li{
+   list-style: none;
+ }
+
+ html{
+   scroll-behavior: smooth;
+ }
+
+ a {
     text-decoration: none;
  }
- .App{
+
+ .App {
     height: 100vh;
  }
 
- .sections{
+ .sections {
     width: 100%;
     height: calc(100vh - 70px);
     position: relative;
     top: 70px;
-    >*{
-      width: 100vw;
-      height: calc(100vh - 70px);
-      overflow: hidden;
-    }
-}
 
+    >* {
+       height: calc(100vh - 70px);
+       overflow-x: hidden;
+    }
+ }
