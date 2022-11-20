@@ -7,7 +7,7 @@
     position: fixed;
     top: 0;
     z-index:99;
-    transition: all .5s ease-in;
+    transition: all .4s ease-in;
    .wrapper{
     padding: 10px 30px;
     display: flex;
@@ -22,7 +22,7 @@
             font-size:40px ;
             font-weight: 600;
             color: #15023a;
-            transition: all .5s ease-in;
+            transition: all .4s ease-in;
 
         }
         .itemContainer{
@@ -55,7 +55,7 @@
             span{
                 background-color: #15023a;
                 height: 3px;
-                transition: all .5s ease-in;
+                transition: all .4s ease-in;
                 width: 100%;
                 transform-origin:left ;
                

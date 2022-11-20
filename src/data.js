@@ -57,7 +57,7 @@ export const dataSkills = [
   },
   {
     id:6,
-    name:"TypeScrpt",
+    name:"TypeScript",
     icon:null
   },
   {
