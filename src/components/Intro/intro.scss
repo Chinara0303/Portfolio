@@ -2,7 +2,90 @@
 
 #intro {
     display: flex;
- 
+    position: relative;
+
+    i {
+        z-index: 11;
+    }
+
+    .moon {
+        top: 11%;
+        left: 53%;
+        position: absolute;
+        font-size: 30px;
+        transform: rotate(-10deg);
+        animation: moon 5s infinite;
+
+        @keyframes moon {
+            0% {
+                color: rgb(153, 153, 147);
+            }
+
+            100% {
+                color: #15023a;
+            }
+        }
+
+    }
+
+    .solidstar1 {
+        transform: rotate(26deg);
+        top: 86%;
+        left: 49%;
+        position: absolute;
+        animation: star 1.5s infinite;
+
+        @keyframes star {
+            0% {
+                color: crimson;
+            }
+
+            100% {
+                color: yellow;
+            }
+
+        }
+    }
+
+    .regularstar1 {
+        top: 30%;
+        left: 90%;
+        position: absolute;
+        transform: rotate(12deg);
+        color: crimson;
+        animation: star 1.5s infinite;
+
+        @keyframes star {
+            0% {
+                color: yellow;
+            }
+
+            100% {
+                color: crimson;
+            }
+
+        }
+    }
+
+
+    .solidstar2 {
+        transform: rotate(52deg);
+        top: 53%;
+        left: 52%;
+        position: absolute;
+        color: #15023a;
+
+    }
+
+    .regularstar2 {
+
+        top: 80%;
+        left: 89%;
+        position: absolute;
+        transform: rotate(-19deg);
+        color: #15023a;
+
+    }
 
     @include mobile {
         flex-direction: column;
@@ -11,6 +94,7 @@
     .left {
         flex: 0.5;
         overflow: hidden;
+
 
         .imgContainer {
             background-color: crimson;
@@ -39,6 +123,7 @@
     .rigth {
         flex: 0.5;
         position: relative;
+        background-image: url(../../../public/assets/photo_2022-11-20_14-49-09.jpg);
 
         .wrapper {
             display: flex;
@@ -93,10 +178,11 @@
             img {
                 width: 30px;
                 animation: arrow 2s infinite;
+
                 @keyframes arrow {
                     100% {
                         opacity: 0;
-                        
+
                     }
                 }
             }
