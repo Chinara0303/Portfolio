@@ -12,6 +12,13 @@ export const dataWebSites = [
     src:"../assets/Nestimg.png",
     github:"https://github.com/Chinara0303/Nest",
     weblink:"https://nestapp.netlify.app/"
+  },
+  {
+    id:3,
+    title: "Todo-app",
+    src:"../assets/Todoappimg.png",
+    github:"https://github.com/Chinara0303/Todo-app",
+    weblink:"https://chtodo-app.netlify.app/"
   }
 ]
 
