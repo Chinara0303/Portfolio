@@ -3,9 +3,10 @@ import Topbar from "./components/Topbar/Topbar"
 import Works from "./components/Works/Works"
 import Skills from "./components/Skills/Skills"
 import Intro from "./components/Intro/Intro"
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import Menu from './components/Menu/Menu';
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import Aos from 'aos';
+import 'aos/dist/aos.css';
 
 function App() {
   const [menuOpen, SetmenuOpen] = useState(false)
@@ -17,22 +18,21 @@ function App() {
       setLoading(false);
     }, 2000);
   }
+  useEffect(()=>{
+    Aos.init();
+  },[]);
   return (
     !loading && (
       <div className='App'>
         <Topbar menuOpen={menuOpen} SetmenuOpen={SetmenuOpen} />
         <Menu menuOpen={menuOpen} SetmenuOpen={SetmenuOpen} />
         <div className="sections">
-          <BrowserRouter>
-            <Routes>
-              <Route exact path='/' element={<Intro />} />
-              <Route path='/skills' element={<Skills />} />
-              <Route path='/works' element={<Works />} />
-            </Routes>
-          </BrowserRouter>
+          <Intro/>
           <Skills/>
           <Works/>
         </div>
+          
+
       </div>
     )
 

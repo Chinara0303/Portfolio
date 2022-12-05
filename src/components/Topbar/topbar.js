@@ -14,7 +14,6 @@ export default function TopBar({menuOpen,SetmenuOpen}) {
            <i className="fa-solid fa-envelope"></i>
            <span>cinareibadova1202@gmail.com</span> 
           </div>
-          
         </div>
         <div className="rigth">
           <div className="hamburger" onClick={()=>SetmenuOpen(!menuOpen)}>

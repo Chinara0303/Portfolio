@@ -4,8 +4,7 @@ import { dataWebSites } from "../../data";
 import "../Slickslider/slick.scss";
 import "../Slickslider/slick-theme.scss";
 
-
-export default function Works(showTopButton,setShowTopButton) {
+export default function Works() {
 
   const Settings = {
     dots: true,
@@ -52,7 +51,7 @@ export default function Works(showTopButton,setShowTopButton) {
         <div className='container'>
           <Slider {...Settings}>
             {dataWebSites.map((d) => (
-              <div className='card' key={d.id}>
+              <div data-aos='zoom-in' data-aos-duration='2000' className='card' key={d.id}>
                 <div className='top'>
                   <div className='topContainer'>
                     <a href={d.weblink}>
